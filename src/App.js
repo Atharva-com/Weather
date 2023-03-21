@@ -49,7 +49,9 @@ function App() {
   fetchWeather()
 
   return (
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
+    <div className='bg-black h-[100vh] absolute top-0 w-full flex flex-col gap-y-6 items-center justify-center'>
+      <h1 className='text-center text-3xl sm:text-5xl text-white'>Check your Location's Weather - </h1>
+    <div className={`max-w-screen-md py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <Topbuttons setQuery={setQuery} />
       <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
 
@@ -63,6 +65,7 @@ function App() {
       )}
 
         < ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+    </div>
     </div>
   );
 }
